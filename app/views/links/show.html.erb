@@ -1,2 +1,14 @@
-<h1>Link Stats for <%= @link.slug%></h1>
-<h3>Visits: <%= @link.visit_count %></h3>
+<h3>Link Stats for <%= @link.slug%></h3>
+<h6>Visits: <%= @link.visit_count %></h6>
+
+<p>Locations from which people have visited the site:</p>
+<ul>
+  <% @link.visits.each do |visit| %>
+    <li>
+    <%= visit.ip_address %>
+    <%= "#{visit.latitude}, #{visit.longitude}" %>
+    </li>
+  <% end %>
+</ul>
+
+<img src=<%= @link.map_url %>>

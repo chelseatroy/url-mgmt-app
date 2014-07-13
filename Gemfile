@@ -1,18 +1,27 @@
 source 'https://rubygems.org'
 
 #NON-DEFAULT
-gem 'bootstrap-sass'
 
+#styling
+gem 'bootstrap-sass'
+#testing
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
 end
-
+#log cleanup
 gem 'quiet_assets'
+#making forms
 gem 'simple_form'
-
+#users
 gem 'devise'
+#testing
 gem 'capybara'
 gem 'selenium-webdriver'
+#producing map from IP addresses
+gem 'geocoder'
+#heroku
+gem 'rails_12factor', group: :production
+gem 'pg'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -1,5 +1,28 @@
 
-.btn-danger, .btn-success {
-  color: #FFF;
-  // ??
+body {
+  background-image: image-url("congruent_outline.png");
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  color: white;
+}
+
+.btn-danger a, .btn-success a{
+  color: white;
+}
+
+.controls {
+  color: black;
+}
+
+.index-header{
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+.index-table {
+  th{
+    font-size: 1.4em;
+  }
+  th{
+    font-size: 1.2em;
+  }
 }

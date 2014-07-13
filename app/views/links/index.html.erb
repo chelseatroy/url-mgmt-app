@@ -1,8 +1,8 @@
 <h7>Hello, <%= current_user.email %>!</h7>
 
-<h2>Here are all your links:</h2>
+<h2 class="index-header">Here are all your links:</h2>
 
-<table class="table">
+<table class="table table-hover index-table">
   <tr>
     <th>Description</th>
     <th>Slug (what's on the end of your shortlink)</th>
@@ -15,7 +15,7 @@
       <td><%= link_to link.description, link_path(link.id)%></td>
       <td><%= link_to link.slug, link_path(link.id) %></td>
       <td><%= link_to link.target_url, link_path(link.id) %></td>
-      <td><%= link_to link.visit_count, link_path(link.id)%></td>
+      <td> <%= link_to link.visit_count, link_path(link.id) %> </td>
       <td>
         <div class="btn btn-default"><%= link_to "Edit", edit_link_path(link.id) %></div>
         <div class="btn btn-danger"><%=link_to "Delete",link_path(link.id), 'data-method' => :delete, :class => "delete", :confirm => "Are you sure ?"%></div>

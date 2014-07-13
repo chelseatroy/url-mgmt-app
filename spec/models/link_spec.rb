@@ -29,8 +29,7 @@ RSpec.describe Link, :type => :model do
   end
 
   it 'should count the number of visits to a link' do
-    link = Link.new(:slug => 'example', :target_url => 'example.com')
-    # visit "http://#{link.target_url}"
+    link = Link.create(:slug => 'example', :target_url => 'example.com')
     5.times do
       link.visits.create
     end

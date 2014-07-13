@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140713155045) do
+ActiveRecord::Schema.define(version: 20140713191920) do
 
   create_table "links", force: true do |t|
     t.integer  "user_id"
@@ -45,6 +45,8 @@ ActiveRecord::Schema.define(version: 20140713155045) do
     t.string   "ip_address"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
 end

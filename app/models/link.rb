@@ -15,4 +15,12 @@ class Link < ActiveRecord::Base
     self.visits.count
   end
 
+  def map_url
+    url = "http://maps.googleapis.com/maps/api/staticmap?size=600x300&maptype=roadmap>"
+    self.visits.each do |visit|
+     url = url + "&markers=color:blue%7C#{visit.latitude},#{visit.longitude}"
+    end
+    return url
+  end 
+
 end

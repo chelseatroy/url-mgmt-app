@@ -1,6 +1,6 @@
 <%= simple_form_for @link do |f| %>
-  <%= f.input :description, labal: 'Briefly describe this link. (Example: link for ad on Forbes.com)' %>
-  <%= f.input :slug, label: 'What do you want at the end of the URL? (Example: name-of-company-1' %>
-  <%= f.input :target_url, label: 'What URL do you want this new shortlink to go to?'%>
+  <%= f.input :description, label: "Briefly describe this link. \n (Example: tracking link for our ad on Forbes.com)" %>
+  <%= f.input :slug, label: "What do you want at the end of the URL? (Example: name-of-company-1)" %>
+  <%= f.input :target_url, label: "What URL do you want this new shortlink to go to?"%>
   <%= f.button :submit %>
 <% end %>
