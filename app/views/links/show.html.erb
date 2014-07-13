@@ -1,6 +1,6 @@
-<h2>Link Stats for <%= @link.slug%></h2>
+<h2>Link Stats for: <%= @link.slug%></h2>
 <h3>Visits: <%= @link.visit_count %></h3>
 
 <h4>Locations from which people have clicked this shortlink:</h4>
 
-<img src=<%= @link.map_url %>>
+<img class="link-map" src=<%= @link.map_url %>>
