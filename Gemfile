@@ -7,6 +7,13 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
 end
 
+gem 'quiet_assets'
+gem 'simple_form'
+
+gem 'devise'
+gem 'capybara'
+gem 'selenium-webdriver'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
