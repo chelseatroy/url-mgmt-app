@@ -7,7 +7,7 @@ Rails.application.routes.draw do
    end
 
    unauthenticated do
-     root 'devise/registrations#new', as: :unauthenticated_root
+     root 'static_pages#tour', as: :unauthenticated_root
    end
  end
 

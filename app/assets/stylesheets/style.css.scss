@@ -5,8 +5,15 @@ body {
   color: white;
 }
 
-.btn-danger a, .btn-success a{
+.btn-danger a{
   color: white;
+}
+
+.btn-success {
+  float: right;
+  a{
+    color:white;
+  }
 }
 
 .controls {
@@ -29,4 +36,22 @@ body {
 
 .link-map{
   padding: 10px;
+}
+
+.signup-box{
+  h4 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.signup-form{
+  padding:20px;
+  .form-inputs {
+    padding: 10px;
+  }
+  .form-actions{
+    padding: 10px;
+    color: black;
+  }
 }
