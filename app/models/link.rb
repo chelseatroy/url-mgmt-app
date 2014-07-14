@@ -23,4 +23,20 @@ class Link < ActiveRecord::Base
     return url
   end 
 
+  def total_visits_to_target_url
+    total = 0
+    Link.where(:target_url => self.target_url, :user_id => self.user_id).each do |link|
+      total += link.visit_count 
+    end 
+    total
+  end
+ 
+  def target_url_stats
+    stats_hash = {}
+    Link.where(:target_url => self.target_url, :user_id => self.user_id).each do |link|
+      stats_hash.merge!({self.description => self.visit_count})
+    end 
+    stats_hash
+  end
+
 end

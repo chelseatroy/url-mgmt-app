@@ -1,6 +1,7 @@
 
 body {
   background-image: image-url("congruent_outline.png");
+  background-attachment: fixed;
   font-family: "Trebuchet MS", Arial, sans-serif;
   color: white;
 }
@@ -11,6 +12,7 @@ body {
 
 .btn-success {
   float: right;
+  margin-bottom: 10px;
   a{
     color:white;
   }
@@ -35,7 +37,9 @@ body {
 }
 
 .link-map{
-  padding: 10px;
+  margin: 10px;
+  width: 600px;
+  border:5px solid white;
 }
 
 .signup-box{

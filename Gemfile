@@ -22,6 +22,8 @@ gem 'geocoder'
 #heroku
 gem 'rails_12factor', group: :production
 gem 'pg'
+# graphics
+gem 'chartkick'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

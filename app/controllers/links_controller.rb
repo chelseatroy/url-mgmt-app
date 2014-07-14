@@ -7,6 +7,7 @@ class LinksController < ApplicationController
   end
 
   def show
+    @links = current_user.links
     @link = current_user.links.find_by(:id => params[:id])
 
     unless @link
@@ -62,6 +63,16 @@ class LinksController < ApplicationController
       redirect_to links_path
     else
       flash[:warning] = "Unsuccessful"
+      redirect_to links_path
+    end
+  end
+
+  def url_stats
+    @links = current_user.links
+    @link = current_user.links.find_by(:id => params[:id])
+
+    unless @link
+      flash[:warning] = "Link not found"
       redirect_to links_path
     end
   end

@@ -16,7 +16,7 @@
     <tr>
       <td><%= link_to link.description, link_path(link.id)%></td>
       <td><%= link_to link.slug, link_path(link.id) %></td>
-      <td><%= link_to link.target_url, link_path(link.id) %></td>
+      <td><a href="/url_stats/<%= link.id %>"><%= link.target_url %><a></td>
       <td> <%= link_to link.visit_count, link_path(link.id) %> </td>
       <td>
         <div class="btn btn-default"><%= link_to "Edit", edit_link_path(link.id) %></div>

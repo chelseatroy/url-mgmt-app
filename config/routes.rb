@@ -12,9 +12,13 @@ Rails.application.routes.draw do
  end
 
  resources :links
+ get '/url_stats/:id' => 'links#url_stats'
+ 
  resources :visits
-
+ 
  get '/:slug' => 'visits#create'
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

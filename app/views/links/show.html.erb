@@ -4,3 +4,9 @@
 <h4>Locations from which people have clicked this shortlink:</h4>
 
 <img class="link-map" src=<%= @link.map_url %>>
+
+<%= @link.total_visits_to_target_url %>
+<p>This shortlink has produced 
+  <%= 100*(@link.visit_count/@link.total_visits_to_target_url) %>
+  % of all the tracked clicks to your website since it was created!</p>
+
