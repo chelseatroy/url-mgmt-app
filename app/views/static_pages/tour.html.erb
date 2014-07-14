@@ -1,15 +1,19 @@
-<div class="tour">
+
   <div class="section">
     <h1>Track where your clicks come from,</h1>
     <h1>on the web and in the world.</h1>
   </div>
 
-  <div class="section">
-    <h3>Track where all the clicks come from...to your website, or any website.</h3>
-    
+  <div class="tour section">
+    <h3>Track clicks to your website, or any website.</h3>
+    <%= image_tag("index-shot.png") %>
   </div>
 
+  <div class="tour section">
+    <h3>See how many clicks you get from each URL... and where in the world people are clicking from.</h3>
+    <%= image_tag("show-shot.png") %>
+  </div>
 
-
-  <a href="/users/sign_up">Sign Up</a>
-</div>
+  <div class="section">
+    <div class="btn btn-default tour-btn"><%= link_to "Sign Up", "/users/sign_up" %></div>
+  </div>
