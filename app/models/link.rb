@@ -34,7 +34,7 @@ class Link < ActiveRecord::Base
   def target_url_stats
     stats_hash = {}
     Link.where(:target_url => self.target_url, :user_id => self.user_id).each do |link|
-      stats_hash.merge!({self.description => self.visit_count})
+      stats_hash.merge!({link.description => link.visit_count})
     end 
     stats_hash
   end

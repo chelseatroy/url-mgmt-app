@@ -3,10 +3,24 @@
 
 <h4>Locations from which people have clicked this shortlink:</h4>
 
-<img class="link-map" src=<%= @link.map_url %>>
+<div class='col-md-8'>
+  <img class="link-map" src=<%= @link.map_url %>>
+</div>
 
-<%= @link.total_visits_to_target_url %>
-<p>This shortlink has produced 
-  <%= 100*(@link.visit_count/@link.total_visits_to_target_url) %>
-  % of all the tracked clicks to your website since it was created!</p>
+<div class="col=md-4">
+  <table class="slug-data-table">
+    <tr>
+      <td class="words">Number of clicks on this shortlink:  </td> 
+      <td><%= @link.visit_count %></td>
+    </tr>
+    <tr>
+      <td class="words">Number of tracked clicks for the url this shorlink goes to:  </td>
+      <td><%= @link.total_visits_to_target_url %></td>
+    </tr>
+    <tr>
+      <td class="words">Percentage of tracked clicks to this site that came from this specific slug:  </td> 
+      <td><%= '%.2f' % (100*(@link.visit_count.to_f/@link.total_visits_to_target_url.to_f)) %>%</td>
+    </tr>
+  </table>
+</div>
 

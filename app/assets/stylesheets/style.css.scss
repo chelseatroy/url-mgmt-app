@@ -59,3 +59,14 @@ body {
     color: black;
   }
 }
+
+.slug-data-table{
+  tr, td{ border:1px solid white;}
+  td{
+    padding:10px;
+    .words{
+      font-size: 18px;
+      color: red;
+    }
+  }
+}

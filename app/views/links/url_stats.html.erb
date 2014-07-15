@@ -1,3 +1,6 @@
-<h3>Where your clicks are coming from to this target URL:</h3>
+<h3>Where your clicks are coming from to <%= link_to @link.target_url, link_path(@link.target_url)%>:</h3>
 
-<%= pie_chart(@link.target_url_stats) %>
+<div>
+  <%= pie_chart @link.target_url_stats, library: {width: "400px", backgroundColor: "transparent", colors: ["blue", "red", "purple", "green", "orange", "black", "yellow"], pieHole: 0.4, pieSliceBorderColor: "#444"} %>
+</div>
+
