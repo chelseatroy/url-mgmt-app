@@ -2,6 +2,7 @@ class Link < ActiveRecord::Base
   
   validates :slug, presence: true
   validates :target_url, presence: true
+  validates :slug, uniqueness: true
 
   belongs_to :user
   has_many :visits

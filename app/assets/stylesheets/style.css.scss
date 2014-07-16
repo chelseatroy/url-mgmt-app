@@ -23,6 +23,11 @@ body {
   color: black;
 }
 
+#error_explanation p, li{
+  color: red;
+  font-size: 18px;
+}
+
 .index-header{
   margin-top: 1.2em;
   margin-bottom: 1.2em;

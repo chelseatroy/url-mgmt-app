@@ -36,4 +36,11 @@ RSpec.describe Link, :type => :model do
 
     expect(link.visit_count).to eq(5)
   end
+
+  it 'should not allow duplicate slugs' do
+    link = Link.create(:slug => 'example', :target_url => 'example.com')
+    another_link = Link.new(:slug => 'example', :target_url => 'example.com')
+
+    expect(another_link).to_not be_valid
+  end
 end
